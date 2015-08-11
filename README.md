@@ -2,6 +2,8 @@
 
 A nice simple iOS app which delivers a random Chuck Norris quote, fresh from the [Chuck Norris API](http://www.icndb.com/api/).
 
+![screenshot](./chuck_norris_win.png =100x)
+
 ### To use
 
 1. Clone this repo
@@ -30,26 +32,38 @@ let onAPIResponse : (String) -> Void = {
         self.lbWordsOfWisdom.text = quote
   }
 ```
-Using the callback:
+Passing the callback:
 ```
 getQuoteFromChuckNorrisAPI(onAPIResponse)
 ```
+Using the callback:
+```
+quoteFromAPI = "Message to display"
+onResponseCallback(quoteFromAPI)
+```
 
-Basically, you are giving a name (`onAPIResponse`) to a function (`self.lbWordsOfWisdom.text = quote`) which returns takes a string, and shoves it on the label.
+Basically, you are giving a name (`onAPIResponse`) to a function (`self.lbWordsOfWisdom.text = quote`) which takes a string, and shoves it on the label.
 
 You then pass the api function (`getQuoteFromChuckNorrisAPI`) the named function (`onAPIResponse`) as an argument.
 
 The api function then uses Alamofire to get the JSON, pull out the joke as a string, and the passes it to your callback (`onAPIResponse`) to deal with.
 
-#### Asyncronous Requests
+#### Syncronous Requests
 
+This might seem a bit over the top for a simple API. So what happens if you don't use a callback?
 
-#### Callbacks
+We don't have imagine this horrible dystopia. Check out the `syncronous-calls` branch of this project, and run it.
+
+Chuck Norris says ... Nothing!
+
+This happens because of race conditions. ln47, which should be returning the result of the API, is return an empty string. This is because whilst Alamofire is dutifully contacting the Chuck Norris database, your code has rushed on ahead to the next bit, return the value for `quoteFromAPI`. Check out the logging statements in the debugger to see this in action.
+
+<iframe src="//giphy.com/embed/105oA1tkTBSy9a" width="480" height="391" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/call-me-maybe-big-fat-quiz-of-the-year-105oA1tkTBSy9a">via GIPHY</a></p>
 
 
 #### Disclaimer
 
-This code is designed to keep things as simple as possible. If you were doing this within a larger app you would need to considor:
+This code is designed to keep things as simple as possible. Hopefully it succeeds, and hasn't melted your brain (sorry if it has). If you were doing this within a larger app you would need to considor:
 
 * Error handling
 * Extracting the API calls into a seperate class to conform to the MVC design model
