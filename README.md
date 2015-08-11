@@ -2,7 +2,7 @@
 
 A nice simple iOS app which delivers a random Chuck Norris quote, fresh from the [Chuck Norris API](http://www.icndb.com/api/).
 
-![screenshot](./chuck_norris_win.png =100x)
+![screenshot](https://github.com/yvettecook/ChuckNorrisWithAlamoFire/blob/master/chuck_norris_win.png)
 
 ### To use
 
@@ -57,8 +57,6 @@ We don't have imagine this horrible dystopia. Check out the `syncronous-calls` b
 Chuck Norris says ... Nothing!
 
 This happens because of race conditions. ln47, which should be returning the result of the API, is return an empty string. This is because whilst Alamofire is dutifully contacting the Chuck Norris database, your code has rushed on ahead to the next bit, return the value for `quoteFromAPI`. Check out the logging statements in the debugger to see this in action.
-
-<iframe src="//giphy.com/embed/105oA1tkTBSy9a" width="480" height="391" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/call-me-maybe-big-fat-quiz-of-the-year-105oA1tkTBSy9a">via GIPHY</a></p>
 
 
 #### Disclaimer
