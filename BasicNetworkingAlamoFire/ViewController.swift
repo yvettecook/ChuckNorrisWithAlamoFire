@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     func getQuote() {
         var quote = getQuoteFromChuckNorrisAPI()
-        
+
         lbWordsOfWisdom.text = quote
     }
     
@@ -44,6 +44,7 @@ class ViewController: UIViewController {
                 println("Quote returned from API: \(quoteFromAPI)")
         }
         
+        println("returning quoteFromAPI as value: \(quoteFromAPI)")
         return quoteFromAPI
         
     }
