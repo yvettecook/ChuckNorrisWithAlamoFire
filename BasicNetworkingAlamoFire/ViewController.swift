@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
     }
     
-    func getQuoteFromChuckNorrisAPI(onResponse: (String) -> Void) {
+    func getQuoteFromChuckNorrisAPI(onResponseCallback: (String) -> Void) {
         
         var quoteFromAPI = ""
         
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
                 if error == nil {
                     let value: AnyObject? = JSON?.objectForKey("value")
                     quoteFromAPI = value?.objectForKey("joke") as! String
-                    onResponse(quoteFromAPI)
+                    onResponseCallback(quoteFromAPI)
                 } else {
                     onResponse("Error")
                 }
