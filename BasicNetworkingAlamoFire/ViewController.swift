@@ -50,9 +50,6 @@ class ViewController: UIViewController {
                 println(quoteFromAPI)
             }
     }
-    
-  
-
 
 
 }
