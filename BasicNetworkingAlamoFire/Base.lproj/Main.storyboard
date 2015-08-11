@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -22,12 +23,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[something]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdK-QQ-uBg">
-                                <rect key="frame" x="255" y="219" width="90" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8er-VG-P2y">
                                 <rect key="frame" x="247" y="359" width="107" height="30"/>
                                 <state key="normal" title="Get me a quote">
@@ -37,16 +32,29 @@
                                     <action selector="tappedGetMeAQuote:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="NQZ-db-c5G"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[something]" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NdK-QQ-uBg">
+                                <rect key="frame" x="36" y="219" width="528" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="NdK-QQ-uBg" secondAttribute="trailing" constant="20" id="LY7-AZ-kXC"/>
                             <constraint firstAttribute="centerX" secondItem="wGA-sF-Bx4" secondAttribute="centerX" constant="-0.5" id="S7v-Av-DYk"/>
                             <constraint firstItem="8er-VG-P2y" firstAttribute="top" secondItem="NdK-QQ-uBg" secondAttribute="bottom" constant="119" id="VyU-0d-0tY"/>
                             <constraint firstItem="wGA-sF-Bx4" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="76" id="bLd-77-J3B"/>
                             <constraint firstAttribute="centerX" secondItem="8er-VG-P2y" secondAttribute="centerX" constant="-0.5" id="iWh-ol-uh3"/>
                             <constraint firstAttribute="centerX" secondItem="NdK-QQ-uBg" secondAttribute="centerX" id="mwj-FY-yKE"/>
+                            <constraint firstItem="NdK-QQ-uBg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="xaI-Kb-qpC"/>
                             <constraint firstItem="NdK-QQ-uBg" firstAttribute="top" secondItem="wGA-sF-Bx4" secondAttribute="bottom" constant="102" id="xvb-90-uK5"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mwj-FY-yKE"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="lbWordsOfWisdom" destination="NdK-QQ-uBg" id="esI-l2-HJW"/>

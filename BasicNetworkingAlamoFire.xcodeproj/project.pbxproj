@@ -14,7 +14,6 @@
 		A585C3BC1B7A611000172636 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A585C3BB1B7A611000172636 /* Images.xcassets */; };
 		A585C3BF1B7A611000172636 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A585C3BD1B7A611000172636 /* LaunchScreen.xib */; };
 		A585C3CB1B7A611000172636 /* BasicNetworkingAlamoFireTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585C3CA1B7A611000172636 /* BasicNetworkingAlamoFireTests.swift */; };
-		A585C3D51B7A63C900172636 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585C3D41B7A63C900172636 /* API.swift */; };
 		A585C3D91B7A66D800172636 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A585C3D81B7A66D800172636 /* Podfile */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		A585C3C41B7A611000172636 /* BasicNetworkingAlamoFireTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasicNetworkingAlamoFireTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A585C3C91B7A611000172636 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A585C3CA1B7A611000172636 /* BasicNetworkingAlamoFireTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicNetworkingAlamoFireTests.swift; sourceTree = "<group>"; };
-		A585C3D41B7A63C900172636 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A585C3D81B7A66D800172636 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		FCF7B178B2BF7FB4179E743B /* Pods_BasicNetworkingAlamoFire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicNetworkingAlamoFire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -90,7 +88,6 @@
 			children = (
 				A585C3B41B7A611000172636 /* AppDelegate.swift */,
 				A585C3B61B7A611000172636 /* ViewController.swift */,
-				A585C3D41B7A63C900172636 /* API.swift */,
 				A585C3B81B7A611000172636 /* Main.storyboard */,
 				A585C3BB1B7A611000172636 /* Images.xcassets */,
 				A585C3BD1B7A611000172636 /* LaunchScreen.xib */,
@@ -295,7 +292,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A585C3B71B7A611000172636 /* ViewController.swift in Sources */,
-				A585C3D51B7A63C900172636 /* API.swift in Sources */,
 				A585C3B51B7A611000172636 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
