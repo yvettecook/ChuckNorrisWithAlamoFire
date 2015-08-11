@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "BasicNetworkingAlamoFire.ViewController.(getQuoteFromChuckNorrisAPI (BasicNetworkingAlamoFire.ViewController) -&gt; () -&gt; Swift.String).(closure #1):ViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "jsonObject">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
