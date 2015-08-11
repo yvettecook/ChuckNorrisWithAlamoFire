@@ -12,45 +12,43 @@ import Alamofire
 class ViewController: UIViewController {
     
     @IBOutlet var lbWordsOfWisdom: UILabel!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     @IBAction func tappedGetMeAQuote(sender: AnyObject) {
         getQuote()
     }
     
     func getQuote() {
+        var quote = getQuoteFromChuckNorrisAPI()
         
-        let onAPIResponse : (String) -> Void = {
-            (quote : String) in
-                self.lbWordsOfWisdom.text = quote
-        }
-        
-        getQuoteFromChuckNorrisAPI(onAPIResponse)
-        
+        lbWordsOfWisdom.text = quote
     }
     
-    func getQuoteFromChuckNorrisAPI(onResponse: (String) -> Void) {
+    func getQuoteFromChuckNorrisAPI() -> String {
         
         var quoteFromAPI = ""
         
         Alamofire.request(.GET, "http://api.icndb.com/jokes/random", parameters: nil)
             .responseJSON { _, _, JSON, error in
-                println("json: \(JSON)")
+                println("json response: \(JSON!)")
                 if error == nil {
                     let value: AnyObject? = JSON?.objectForKey("value")
                     quoteFromAPI = value?.objectForKey("joke") as! String
-                    onResponse(quoteFromAPI)
                 } else {
-                    onResponse("Error")
+                    quoteFromAPI = "Error"
                 }
                 
-                println(quoteFromAPI)
-            }
+                println("Quote returned from API: \(quoteFromAPI)")
+        }
+        
+        return quoteFromAPI
+        
     }
-
-
+    
+    
+    
 }
 
