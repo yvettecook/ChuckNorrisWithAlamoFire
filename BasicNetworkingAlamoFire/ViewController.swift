@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tappedGetMeAQuote(sender: AnyObject) {
+        let quote = getQuote()
+        lbWordsOfWisdom.text = quote
     }
     
     func getQuote() -> String {
