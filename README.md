@@ -2,6 +2,8 @@
 
 A nice simple iOS app which delivers a random Chuck Norris quote, fresh from the [Chuck Norris API](http://www.icndb.com/api/).
 
+![screenshot](./chuck_norris_win.png =100x)
+
 ### To use
 
 1. Clone this repo
