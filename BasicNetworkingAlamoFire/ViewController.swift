@@ -44,7 +44,7 @@ class ViewController: UIViewController {
                     quoteFromAPI = value?.objectForKey("joke") as! String
                     onResponseCallback(quoteFromAPI)
                 } else {
-                    onResponse("Error")
+                    onResponseCallback("Error")
                 }
                 
                 println(quoteFromAPI)
